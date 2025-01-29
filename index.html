@@ -14,29 +14,46 @@
         </button>
 
         <div class="flex items-center space-x-2">
-            <span class="text-lg font-semibold text-black">🍅 PomodoroList</span>
+            <a href="#">
+                <span class="text-lg font-semibold text-black">🍅 PomodoroList</span>
+            </a>
         </div>
     </nav>
 
     <div class="flex flex-1">
-        <aside id="sidebar" class="bg-blue-500 text-white w-1/6 min-w-[100px] p-4 rounded-r-lg md:block hidden">
-            <div class="space-y-6">
-                <div class="bg-white p-2 rounded-lg">
-                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
-                        <img src="Assets/icone/home.png" alt="Home" class="w-5 h-5">
-                        <span>Home</span>
-                    </div>
-
-                    <label for="toggle-task" class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
-                        <img src="Assets/icone/add-task.png" alt="Créer" class="w-5 h-5">
-                        <span>Créer une Tâche</span>
-                    </label>
-                    <input type="checkbox" id="toggle-task" class="peer hidden">
-
-                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
-                        <img src="Assets/icone/tasks.png" alt="Tâches" class="w-5 h-5">
-                        <span>Mes Tâches</span>
-                    </div>
+        <aside id="sidebar" class="bg-blue-500 text-white w-[180px] p-3 rounded-r-lg md:block hidden">
+            <div class="bg-white p-2 rounded-lg">
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/home.png" alt="Home" class="w-4 h-4">
+                    <a href="#">
+                        <button type="button">Home</button>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/add-task.png" alt="Créer" class="w-4 h-4">
+                    <button type="button">Créer une Tâche</button>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/tasks.png" alt="Tâches" class="w-4 h-4">
+                    <button type="button">Mes Tâches</button>
+                </div>
+            </div>
+            <div class="bg-white p-2 rounded-lg mt-3">
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/today.png" alt="Aujourd’hui" class="w-4 h-4">
+                    <button type="button">Aujourd’hui</button>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/tomorrow.png" alt="Demain" class="w-4 h-4">
+                    <button type="button">Demain</button>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/week.png" alt="Semaine" class="w-4 h-4">
+                    <button type="button">Cette Semaine</button>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="Assets/icone/complete.png" alt="Complète" class="w-4 h-4">
+                    <button type="button">Complète</button>
                 </div>
             </div>
         </aside>
@@ -58,14 +75,12 @@
                             </button>
                         </div>
                     </div>
-
-                    <div class="peer-checked:block hidden">
-                        <div class="flex items-center space-x-2">
-                            <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
-                            <button class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
-                                <img src="Assets/icone/save.png" alt="Enregistrer" class="w-5 h-5">
-                            </button>
-                        </div>
+                    
+                    <div class="flex gap-9">
+                        <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300">
+                        <button class="bg-blue-600 text-white p-3 w-12 rounded-full ">
+                            <img src="Assets/icone/save.png" alt="Enregistrer" class="w-5 h-5">
+                        </button>
                     </div>
                 </div>
 

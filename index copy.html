@@ -12,77 +12,81 @@
         <button id="menu-btn" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold md:hidden">
             ☰ Menu
         </button>
-
         <div class="flex items-center space-x-2">
             <span class="text-lg font-semibold text-black">🍅 PomodoroList</span>
         </div>
     </nav>
 
-    <div class="flex flex-1">
-        <aside id="sidebar" class="bg-blue-500 text-white w-1/6 min-w-[100px] p-4 rounded-r-lg md:block hidden">
-            <div class="space-y-6">
-                <div class="bg-white p-2 rounded-lg">
-                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
-                        <img src="Assets/icone/home.png" alt="Home" class="w-5 h-5">
-                        <span>Home</span>
+    <aside id="sidebar" class="bg-blue-500 text-white w-full md:w-1/6 min-w-[180px] p-4 fixed md:relative top-0 left-0 h-full z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+        <div class="space-y-6">
+            <div class="bg-white p-2 rounded-lg">
+                <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
+                    <img src="Assets/icone/home.png" alt="Home" class="w-5 h-5">
+                    <span>Home</span>
+                </div>
+
+                <label for="toggle-task" class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
+                    <img src="Assets/icone/add-task.png" alt="Créer" class="w-5 h-5">
+                    <span>Créer une Tâche</span>
+                </label>
+                <input type="checkbox" id="toggle-task" class="peer hidden">
+
+                <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
+                    <img src="Assets/icone/tasks.png" alt="Tâches" class="w-5 h-5">
+                    <span>Mes Tâches</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-6 md:ml-[180px]">
+        <div class="w-full h-[50%]">
+            <div class="bg-red-100 p-6 rounded-lg flex flex-col justify-start h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <label class="text-red-500 font-semibold text-lg">Tâche</label>
+                    <div class="space-x-2 flex">
+                        <button class="bg-green-500 text-white p-3 rounded-full">
+                            <img src="Assets/icone/add.png" alt="Ajouter" class="w-5 h-5">
+                        </button>
+                        <button class="bg-yellow-500 text-white p-3 rounded-full">
+                            <img src="Assets/icone/edit.png" alt="Modifier" class="w-5 h-5">
+                        </button>
+                        <button class="bg-red-500 text-white p-3 rounded-full">
+                            <img src="Assets/icone/delete.png" alt="Supprimer" class="w-5 h-5">
+                        </button>
                     </div>
+                </div>
 
-                    <label for="toggle-task" class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
-                        <img src="Assets/icone/add-task.png" alt="Créer" class="w-5 h-5">
-                        <span>Créer une Tâche</span>
-                    </label>
-                    <input type="checkbox" id="toggle-task" class="peer hidden">
-
-                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold hover:bg-gray-100 rounded-lg">
-                        <img src="Assets/icone/tasks.png" alt="Tâches" class="w-5 h-5">
-                        <span>Mes Tâches</span>
+                <div class="peer-checked:block hidden">
+                    <div class="flex items-center space-x-2">
+                        <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <button class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                            <img src="Assets/icone/save.png" alt="Enregistrer" class="w-5 h-5">
+                        </button>
                     </div>
                 </div>
             </div>
-        </aside>
 
-        <main class="flex-1 p-6">
-            <div class="w-full h-[50%]">
-                <div class="bg-red-100 p-6 rounded-lg flex flex-col justify-start h-full">
-                    <div class="flex justify-between items-center mb-4">
-                        <label class="text-red-500 font-semibold text-lg">Tâche</label>
-                        <div class="space-x-2 flex">
-                            <button class="bg-green-500 text-white p-3 rounded-full">
-                                <img src="Assets/icone/add.png" alt="Ajouter" class="w-5 h-5">
-                            </button>
-                            <button class="bg-yellow-500 text-white p-3 rounded-full">
-                                <img src="Assets/icone/edit.png" alt="Modifier" class="w-5 h-5">
-                            </button>
-                            <button class="bg-red-500 text-white p-3 rounded-full">
-                                <img src="Assets/icone/delete.png" alt="Supprimer" class="w-5 h-5">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="peer-checked:block hidden">
-                        <div class="flex items-center space-x-2">
-                            <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
-                            <button class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
-                                <img src="Assets/icone/save.png" alt="Enregistrer" class="w-5 h-5">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-lg overflow-hidden flex flex-col justify-between h-full mt-6">
-                    <img src="Assets/image/pomodoro.jpg" alt="Tomato Timer" class="w-full h-3/4 object-cover opacity-75">
-                    <div class="flex justify-center space-x-4 p-4">
-                        <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Commencer</button>
-                        <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Arrêter</button>
-                    </div>
+            <div class="bg-black rounded-lg overflow-hidden flex flex-col justify-between h-full mt-6">
+                <img src="Assets/image/pomodoro.jpg" alt="Tomato Timer" class="w-full h-3/4 object-cover opacity-75">
+                <div class="flex justify-center space-x-4 p-4">
+                    <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Commencer</button>
+                    <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Arrêter</button>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <script>
         document.getElementById("menu-btn").addEventListener("click", function() {
-            document.getElementById("sidebar").classList.toggle("hidden");
+            let sidebar = document.getElementById("sidebar");
+            if (sidebar.classList.contains("-translate-x-full")) {
+                sidebar.classList.remove("-translate-x-full");
+                sidebar.classList.add("translate-x-0");
+            } else {
+                sidebar.classList.remove("translate-x-0");
+                sidebar.classList.add("-translate-x-full");
+            }
         });
     </script>
 
