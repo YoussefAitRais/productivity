@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 flex flex-col min-h-screen">
+
+    <nav class="bg-white p-4 shadow-md flex justify-between items-center">
+        <button id="menu-btn" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold md:hidden">
+            ☰ Menu
+        </button>
+
+        <div class="flex items-center space-x-2">
+            <span class="text-lg font-semibold text-black">🍅 PomodoroList</span>
+        </div>
+    </nav>
+
+    <div class="flex flex-1">
+        <aside id="sidebar" class="bg-blue-500 text-white w-[180px] p-3 rounded-r-lg md:block hidden">
+            <div class="bg-white p-2 rounded-lg">
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home" class="w-4 h-4">
+                    <span>Home</span>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Créer" class="w-4 h-4">
+                    <span>Créer une Tâche</span>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1029/1029183.png" alt="Tâches" class="w-4 h-4">
+                    <span>Mes Tâches</span>
+                </div>
+            </div>
+            <div class="bg-white p-2 rounded-lg mt-3">
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3445/3445858.png" alt="Aujourd’hui" class="w-4 h-4">
+                    <span>Aujourd’hui</span>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3445/3445858.png" alt="Demain" class="w-4 h-4">
+                    <span>Demain</span>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3445/3445858.png" alt="Semaine" class="w-4 h-4">
+                    <span>Cette Semaine</span>
+                </div>
+                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Complète" class="w-4 h-4">
+                    <span>Complète</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6">
+            <div class="w-full h-[50%]">
+                <div class="bg-red-100 p-6 rounded-lg flex flex-col justify-start h-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <label class="text-red-500 font-semibold text-lg">Tâche</label>
+                        <div class="space-x-2 flex">
+                            <button class="bg-green-500 text-white p-3 rounded-full">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Ajouter" class="w-5 h-5">
+                            </button>
+                            <button class="bg-yellow-500 text-white p-3 rounded-full">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Modifier" class="w-5 h-5">
+                            </button>
+                            <button class="bg-red-500 text-white p-3 rounded-full">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt="Supprimer" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+
+                <div class="bg-black rounded-lg overflow-hidden flex flex-col justify-between h-full mt-6">
+                    <img src="https://picsum.photos/800/400" alt="Tomato Timer" class="w-full h-3/4 object-cover opacity-75">
+                    <div class="flex justify-center space-x-4 p-4">
+                        <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Commencer</button>
+                        <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Arrêter</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
