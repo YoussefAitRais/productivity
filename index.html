@@ -19,37 +19,39 @@
     </nav>
 
     <div class="flex flex-1">
-        <aside id="sidebar" class="bg-blue-500 text-white w-[180px] p-3 rounded-r-lg md:block hidden">
-            <div class="bg-white p-2 rounded-lg">
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="a" alt="Home" class="w-4 h-4">
-                    <span>Home</span>
+        <aside id="sidebar" class="bg-blue-500 text-white w-1/6 min-w-[100px] p-4 rounded-r-lg md:block hidden">
+            <div class="space-y-6">
+                <div class="bg-white p-2 rounded-lg">
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/home.png" alt="Home" class="w-5 h-5">
+                        <span>Home</span>
+                    </div>
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/add-task.png" alt="Créer" class="w-5 h-5">
+                        <span>Créer une Tâche</span>
+                    </div>
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/tasks.png" alt="Tâches" class="w-5 h-5">
+                        <span>Mes Tâches</span>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Créer" class="w-4 h-4">
-                    <span>Créer une Tâche</span>
-                </div>
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1029/1029183.png" alt="Tâches" class="w-4 h-4">
-                    <span>Mes Tâches</span>
-                </div>
-            </div>
-            <div class="bg-white p-2 rounded-lg mt-3">
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3445/3445858.png" alt="Aujourd’hui" class="w-4 h-4">
-                    <span>Aujourd’hui</span>
-                </div>
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3445/3445858.png" alt="Demain" class="w-4 h-4">
-                    <span>Demain</span>
-                </div>
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3445/3445858.png" alt="Semaine" class="w-4 h-4">
-                    <span>Cette Semaine</span>
-                </div>
-                <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Complète" class="w-4 h-4">
-                    <span>Complète</span>
+                <div class="bg-white p-4 rounded-lg">
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/today.png" alt="Aujourd’hui" class="w-5 h-5">
+                        <span>Aujourd’hui</span>
+                    </div>
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/tomorrow.png" alt="Demain" class="w-5 h-5">
+                        <span>Demain</span>
+                    </div>
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/week.png" alt="Semaine" class="w-5 h-5">
+                        <span>Cette Semaine</span>
+                    </div>
+                    <div class="p-3 flex items-center space-x-2 text-black cursor-pointer font-semibold">
+                        <img src="Assets/icone/complete.png" alt="Complète" class="w-5 h-5">
+                        <span>Complète</span>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -61,21 +63,27 @@
                         <label class="text-red-500 font-semibold text-lg">Tâche</label>
                         <div class="space-x-2 flex">
                             <button class="bg-green-500 text-white p-3 rounded-full">
-                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Ajouter" class="w-5 h-5">
+                                <img src="Assets/icone/add.png" alt="Ajouter" class="w-5 h-5">
                             </button>
                             <button class="bg-yellow-500 text-white p-3 rounded-full">
-                                <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Modifier" class="w-5 h-5">
+                                <img src="Assets/icone/edit.png" alt="Modifier" class="w-5 h-5">
                             </button>
                             <button class="bg-red-500 text-white p-3 rounded-full">
-                                <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt="Supprimer" class="w-5 h-5">
+                                <img src="Assets/icone/delete.png" alt="Supprimer" class="w-5 h-5">
                             </button>
                         </div>
                     </div>
-                    <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+
+                    <div class="flex items-center space-x-2">
+                        <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <button class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                            <img src="Assets/icone/save.png" alt="Enregistrer" class="w-5 h-5">
+                        </button>
+                    </div>
                 </div>
 
                 <div class="bg-black rounded-lg overflow-hidden flex flex-col justify-between h-full mt-6">
-                    <img src="https://picsum.photos/800/400" alt="Tomato Timer" class="w-full h-3/4 object-cover opacity-75">
+                    <img src="Assets/image/pomodoro.jpg" alt="Tomato Timer" class="w-full h-3/4 object-cover opacity-75">
                     <div class="flex justify-center space-x-4 p-4">
                         <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Commencer</button>
                         <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Arrêter</button>
