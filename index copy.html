@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Task Manager</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Js/main.js" defer></script>
 </head>
+
 <body class="bg-gray-200 flex flex-col min-h-screen">
 
     <nav class="bg-white p-4 shadow-md flex justify-between items-center">
@@ -25,13 +28,13 @@
             <div class="bg-white p-2 rounded-lg">
                 <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
                     <img src="Assets/icone/home.png" alt="Home" class="w-4 h-4">
-                    <a href="#">
+                    <a href="index.html">
                         <button type="button">Home</button>
                     </a>
                 </div>
                 <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
                     <img src="Assets/icone/add-task.png" alt="Créer" class="w-4 h-4">
-                    <button type="button">Créer une Tâche</button>
+                    <button id="addTask" type="button">Créer une Tâche</button>
                 </div>
                 <div class="flex items-center space-x-2 p-2 text-black cursor-pointer text-sm">
                     <img src="Assets/icone/tasks.png" alt="Tâches" class="w-4 h-4">
@@ -75,20 +78,33 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="flex gap-9">
-                        <input type="text" placeholder="Écrivez votre tâche ici..." class="w-full p-3 rounded-lg border border-gray-300">
-                        <button class="bg-blue-600 text-white p-3 w-12 rounded-full ">
-                            <img src="Assets/icone/save.png" alt="Enregistrer" class="w-5 h-5">
+                        <input type="text" placeholder="Écrivez votre tâche ici..."
+                            class="w-full p-3 rounded-lg border border-gray-300">
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+                            Ajouter une Tâche
                         </button>
                     </div>
                 </div>
 
                 <div class="bg-black rounded-lg overflow-hidden flex flex-col justify-between h-full mt-6">
-                    <img src="Assets/image/pomodoro.jpg" alt="Tomato Timer" class="w-full h-3/4 object-cover opacity-75">
+                    <img src="Assets/image/pomodoro.jpg" alt="Tomato Timer"
+                        class="w-full h-3/4 object-cover opacity-75">
+
                     <div class="flex justify-center space-x-4 p-4">
-                        <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Commencer</button>
-                        <button class="bg-black/10 text-white px-6 py-3 rounded-lg border border-white">Arrêter</button>
+                        <button
+                            class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition">
+                            Commencer
+                        </button>
+                        <button
+                            class="bg-red-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-600 transition">
+                            Arrêter
+                        </button>
+                        <button
+                            class="bg-gray-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-600 transition">
+                            Reset
+                        </button>
                     </div>
                 </div>
             </div>
@@ -96,10 +112,11 @@
     </div>
 
     <script>
-        document.getElementById("menu-btn").addEventListener("click", function() {
+        document.getElementById("menu-btn").addEventListener("click", function () {
             document.getElementById("sidebar").classList.toggle("hidden");
         });
     </script>
 
 </body>
+
 </html>
