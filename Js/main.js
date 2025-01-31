@@ -119,3 +119,7 @@ function updateLocalStorage() {
     localStorage.setItem("taskArray", JSON.stringify(taskArray));
 }
 
+
+
+
+
