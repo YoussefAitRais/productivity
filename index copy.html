@@ -64,12 +64,11 @@
         <main class="flex-1 p-6">
             <div class="w-full h-[50%]">
                 <div class="bg-red-100 p-6 rounded-lg flex flex-col justify-start h-full">
-                    <div class="flex justify-between items-center mb-4">
+
+                    
+                    <!-- <div class="flex justify-between items-center mb-4">
                         <label class="text-red-500 font-semibold text-lg">Tâche</label>
                         <div class="space-x-2 flex">
-                            <button class="bg-green-500 text-white p-3 rounded-full">
-                                <img src="Assets/icone/add.png" alt="Ajouter" class="w-5 h-5">
-                            </button>
                             <button class="bg-yellow-500 text-white p-3 rounded-full">
                                 <img src="Assets/icone/edit.png" alt="Modifier" class="w-5 h-5">
                             </button>
@@ -77,14 +76,18 @@
                                 <img src="Assets/icone/delete.png" alt="Supprimer" class="w-5 h-5">
                             </button>
                         </div>
-                    </div>
+                    </div> -->
+
 
                     <div class="flex gap-9">
-                        <input type="text" placeholder="Écrivez votre tâche ici..."
+                        <input id="taskInput" type="text" placeholder="Écrivez votre tâche ici..."
                             class="w-full p-3 rounded-lg border border-gray-300">
-                        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+                        <button id="taskSubmit" class="bg-blue-600 text-white px-6 py-3 rounded-lg">
                             Ajouter une Tâche
                         </button>
+                    </div>
+                    <div id="taskAdd" class="w-full p-3 rounded-lg border border-gray-500 mt-2">
+                            Tasks ...   
                     </div>
                 </div>
 
